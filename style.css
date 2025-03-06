@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Liter';
+    src: url('fonts/Liter/Liter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, h1, h2, h3, h4, h5, input, button {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Liter', Helvetica, sans-serif !important;
+}
+
+.page-content {
+    padding: 40px;
+}
+
+.mdl-textfield {
+    width: 80%;
+}
+
+.mdl-button {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.page-content2 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.list {
+    font-size: 22px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.check {
+    display: block;
+}
+
+.mdl-radio {
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.op {
+    margin-left: 35px;
+}
+
+.where {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.ED {
+    margin-right: 6px;
+    cursor: pointer;
+    background-color: #b2bbb2;
+    border: 2px solid black;
+    -webkit-box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.56);
+    box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.56);
+}
+
+.text2 {
+    line-height: 1.2;
+    font-size: 22px;
+    margin-left: 0;
+}
+
+.text5 {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #00aeff;
+}
+
+.number {
+    display: flex;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #00aeff;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+select {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.liste {
+    font-size: 22px;
+    background-color: #b2bbb2;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.56);
+    box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.56);
+}
+
+.liste:hover {
+    background-color: #c0c5c0;
+}
+
+@media (max-width: 468px) {
+    .liste {
+        font-size: 18px;
+        width: 280px;
+    }
+}
+
+.beside {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    font-size: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 1.2;
+}
+
+.div1 {
+    font-size: 22px;
+    background-color: #b2bbb2;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
+    -webkit-box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.56);
+    box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.56);
+}
+
+@media (max-width: 1068px) {
+    .div1 {
+        font-size: 17px;
+        width: 150px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.container5 {
+    display: flex;
+}
+
+.name {
+    font-size: 22px;
+    background-color: #b2bbb2;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.56);
+    box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.56);
+}
+
+.container {
+    display: inline-block;
+}
+
+.container1 {
+    display: inline-block;
+}
+
+.icon {
+    margin: 0px;
+    cursor: pointer;
+    width: 50px;
+    height: auto;
+}
+
+.icon:hover, button:hover {
+    transform: scale(1.05);
+}
+
+a {
+    font-size: 25px;
+}
+
+a:hover {
+    color: rgb(240, 68, 125);
+}
+
+li {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.ml10 {
+    margin-left: 15px;
+}
+
+.ml-mr {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+textarea {
+    resize: none;
+    font-family: 'Liter', Helvetica, sans-serif;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2px;
+    font-size: 18px;
+    width: calc(100% - 60px);
+    height: 180px;
+}
+
