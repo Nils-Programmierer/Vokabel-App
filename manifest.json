@@ -1,0 +1,26 @@
+{
+    "theme_color": "#3F51B5",
+    "background_color": "#3F51B5",
+    "icons": [
+        {
+            "purpose": "maskable",
+            "sizes": "512x512",
+            "src": "img/icon512_maskable.png",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any",
+            "sizes": "512x512",
+            "src": "img/icon512_rounded.png",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait",
+    "display": "standalone",
+    "dir": "auto",
+    "lang": "de",
+    "start_url": "/index.html",
+    "short_name": "Vokabel-App",
+    "name": "Vokabel-App",
+    "description": "Die Vokabel-App ermöglicht es, Vokabeln aus Bildern zu scannen und bietet Abfragemethoden wie Karteikarten, Paare und Tests. Zudem gibt es Zugriff auf vordefinierte Vokabellisten für Englisch, um das Lernen zu erleichtern."
+}
