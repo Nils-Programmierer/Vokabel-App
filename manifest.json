@@ -19,7 +19,7 @@
     "display": "standalone",
     "dir": "auto",
     "lang": "de",
-    "start_url": "/index.html",
+    "start_url": "/Vokabel-App/index.html",
     "short_name": "Vokabel-App",
     "name": "Vokabel-App",
     "description": "Die Vokabel-App ermöglicht es, Vokabeln aus Bildern zu scannen und bietet Abfragemethoden wie Karteikarten, Paare und Tests. Zudem gibt es Zugriff auf vordefinierte Vokabellisten für Englisch, um das Lernen zu erleichtern."
