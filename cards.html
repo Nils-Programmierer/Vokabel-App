@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vokabel-App | Karteikarten</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="script2.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/icon512_maskable.png" type="image/x-icon">
+</head>
+
+
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Vokabel-App</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="index.html">Vokabellisten</a>
+                    <a class="mdl-navigation__link" href="cards.html">Vokabel-Karteikarten</a>
+                    <a class="mdl-navigation__link" href="pair.html">Vokabel-Paare</a>
+                    <a class="mdl-navigation__link" href="test.html">Vokabel-Test</a>
+                    <a class="mdl-navigation__link" href="instructions.html">Anleitung</a>
+                    <a class="mdl-navigation__link" href="impressum.html">Impressum</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Vokabel-App</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Vokabellisten</a>
+                <a class="mdl-navigation__link" href="cards.html">Vokabel-Karteikarten</a>
+                <a class="mdl-navigation__link" href="pair.html">Vokabel-Paare</a>
+                <a class="mdl-navigation__link" href="test.html">Vokabel-Test</a>
+                <a class="mdl-navigation__link" href="instructions.html">Anleitung</a>
+                <a class="mdl-navigation__link" href="impressum.html">Impressum</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content2">
+                <div class="hidden" id="hiddenid">
+                    <div id="number" class="number"></div>
+                    Was bedeutet
+                    <h1 id="word"></h1>
+
+                    <div id="none">
+                        <form id="deutschEnglischForm" onsubmit="return false" style="display: none;">
+
+
+                            <div class="beside">
+                                <button onclick="compare()"
+                                    class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                                    <i class="material-icons" id="wrong">?</i>
+                                </button>
+
+                                <button onclick="compare3()"
+                                    class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                                    <i class="material-icons" id="other">logout</i>
+                                </button>
+
+
+                                <button onclick="compare2()"
+                                    class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                                    <i class="material-icons" id="right">check</i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <form id="englischDeutschForm" onsubmit="return false" style="display: none;">
+                            <div class="beside">
+                                <button onclick="compare()"
+                                    class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                                    <i class="material-icons" id="wrong">?</i>
+                                </button>
+
+
+                                <button onclick="compare3()"
+                                    class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                                    <i class="material-icons" id="other">logout</i>
+                                </button>
+
+
+                                <button onclick="compare2()"
+                                    class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                                    <i class="material-icons" id="right">check</i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="ml-mr">
+                        <h3 id="text" class="ml-mr"></h3>
+                    </div>
+                </div>
+
+                <div class="check">
+                    <h1>Vokabel-Karteikarten</h1>
+                    <h4>Wie willst du abgefragt werden?</h4>
+
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                        <span class="mdl-radio__label">Deutsch - Englisch</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                        <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                        <span class="mdl-radio__label">Englisch - Deutsch</span>
+                    </label>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>Welche Vokabelliste soll abgefragt werden?</h4>
+                    <select id="selection" name="selection">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+
+                <div class="button">
+                    <button onclick="startCards()"
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Starten
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="allend" id="allend" style="display: none;">
+                <h1 class="middle">Fertig!</h1>
+                <br>
+                <div class="where" id="where">
+                    Gewusste Wörter:
+                    <br>
+                    <br>
+                    Nicht gewusste Wörter:
+                    <br>
+                    <br>
+                    Gesamtwörteranzahl:
+                </div>
+                <br>
+                <br>
+                <h3 class="op">Nicht gewusste Wörter:</h3>
+                <ul id="falsevocabulary" class="list"></ul>
+                <br>
+                <br>
+                <br>
+                <div class="button">
+                    <button onclick="location.reload();"
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Zurück
+                    </button>
+                </div>
+
+
+            </div>
+            <br>
+            <br>
+            <br>
+        </main>
+    </div>
+
+
+
+</body>
+
+</html>

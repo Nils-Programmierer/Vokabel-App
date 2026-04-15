@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vokabel-App | Vokabeln scannen</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="script5.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/icon512_maskable.png" type="image/x-icon">
+</head>
+
+
+<body onload="render()">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Vokabel-App</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="index.html">Vokabellisten</a>
+                    <a class="mdl-navigation__link" href="cards.html">Vokabel-Karteikarten</a>
+                    <a class="mdl-navigation__link" href="pair.html">Vokabel-Paare</a>
+                    <a class="mdl-navigation__link" href="test.html">Vokabel-Test</a>
+                    <a class="mdl-navigation__link" href="instructions.html">Anleitung</a>
+                    <a class="mdl-navigation__link" href="impressum.html">Impressum</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Vokabel-App</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Vokabellisten</a>
+                <a class="mdl-navigation__link" href="cards.html">Vokabel-Karteikarten</a>
+                <a class="mdl-navigation__link" href="pair.html">Vokabel-Paare</a>
+                <a class="mdl-navigation__link" href="test.html">Vokabel-Test</a>
+                <a class="mdl-navigation__link" href="instructions.html">Anleitung</a>
+                <a class="mdl-navigation__link" href="impressum.html">Impressum</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="button2">
+                    <button onclick="back();"
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Zurück
+                    </button>
+                </div>
+                <div class="middle">
+                    <h1>Vokabeln scannen</h1>
+                </div>
+                <h3>Vokabeln hinzufügen:</h3>
+                <div class="text2">
+                    <label for="selection">Hinzufügen zu Liste:</label>
+                    <select id="selection" name="selection">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+                <img src="img/photo_camera.png" alt="Kamera" class="icon" onclick="MakeImg();">
+                <img src="img/image.png" alt="Galerie" class="icon" onclick="OpenImg();">
+                <input type="file" id="input" accept="image/*" capture="environment" style="display: none;">
+                <br>
+                <div class="progress text2"></div>
+                <br>
+                <button id="start" disabled
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Starten
+                </button>
+
+                <br>
+                <br>
+
+                <textarea id="output" placeholder="Lade ein Bild hoch und drücke auf Starten."></textarea>
+                <br>
+                <div class="text2">
+                    Bitte beachte das zwischen jeder englischen Vokabel und der Übersetzung mehrere Leerzeichen stehen
+                    müssen.
+                </div>
+                <br>
+                <br>
+                <button onclick="addVoc();"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Hinzufügen
+                </button>
+
+            </div>
+            <br>
+            <br>
+            <br>
+        </main>
+    </div>
+
+</body>
+
+</html>
